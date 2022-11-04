@@ -68,4 +68,23 @@ public class Truck extends Vehicle {
             super.setSpeed(0);
         }
     }
+
+    /**
+     * The airBreak() function.
+     *
+     * @param breakPower - breakPower from user
+     * @param breakTime - breakTime from user
+     * @param airPressure - airpressure from user
+     */
+    public void airBreak(final int breakPower,
+                    final int breakTime, final int airPressure) {
+        super.setSpeed(
+                    super.getSpeed() - breakPower
+                    * breakTime - airPressure
+                    * breakTime);
+
+        if (super.getSpeed() < 0) {
+            super.setSpeed(0);
+        }
+    }
 }

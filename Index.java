@@ -32,6 +32,18 @@ final class Index {
     private static final int MAGIC1 = 1;
 
     /**
+     * Constant Variable MagicNumber4.
+     *
+     */
+    private static final int MAGIC4 = 4;
+
+    /**
+     * Constant Variable MagicNumber20.
+     *
+     */
+    private static final int MAGIC20 = 20;
+
+    /**
      * Constant Variable Speed.
      *
      */
@@ -78,11 +90,12 @@ final class Index {
         truck.status();
 
         System.out.println("Accelerating, 10 of power for ten seconds.");
-        truck.accelerate(MAGIC10, MAGIC10);
+        truck.accelerate(MAGIC20, MAGIC10);
         System.out.println(NEWSPEED + truck.getSpeed());
 
-        System.out.println("\nBreaking, 10 of power for 10 sec.");
-        truck.accelerate(MAGIC10, MAGIC10);
+        System.out.println(
+                        "\nBreaking, 1 power for 1 sec with 4 air pressure.");
+        truck.airBreak(MAGIC1, MAGIC1, MAGIC4);
         System.out.println(NEWSPEED + truck.getSpeed());
 
         System.out.println("\nApplyed air pressure of 10: ");
